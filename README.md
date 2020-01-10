@@ -140,7 +140,14 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 git clone git://github.com/yyuu/pyenv.git ${HOME}/.pyenv
 git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
-# Instal related packages
+# Install pyenv
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshenv
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshenv
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshenv
+# Restart terminal and check the installation
+pyenv
+
+# Install related packages
 sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev \
 xz-utils tk-dev libffi-dev liblzma-dev python-openssl
