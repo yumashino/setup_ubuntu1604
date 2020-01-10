@@ -14,11 +14,8 @@ Some libraries are installed with specific versions (around GPU).
   - `sudo apt upgrade`
 
 - Install via Ubuntu Software
-
-  - Chromium
   - FileZilla
   - Screen Ruler
-  - VLC
 
 - Others
 
@@ -38,7 +35,7 @@ Some libraries are installed with specific versions (around GPU).
 
   - Basic libraries
 
-    `sudo apt install git vim tmux curl make cmake gnome-system-monitor openssh-server` 
+    `sudo apt install git vim tmux curl make cmake gnome-system-monitor openssh-server vlc chromium-browser` 
     
 
 ## Zsh + Prezto
@@ -171,6 +168,7 @@ sudo apt install dconf-editor
 ```
 
 Open `dconf Editor` app, and change configurations as bellow.
+Browse org | gnome | desktop | remote-access.
 
 ![vino-disable-encryption-600x241](./vino-disable-encryption-600x241.jpg)
 
