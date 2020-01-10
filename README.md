@@ -35,7 +35,7 @@ Some libraries are installed with specific versions (around GPU).
 
   - Basic libraries
 
-    `sudo apt install git vim tmux curl make cmake gnome-system-monitor openssh-server vlc chromium-browser` 
+    `sudo apt install git vim tmux curl make cmake gnome-system-monitor openssh-server exfat-fuse exfat-utilsvlc chromium-browser` 
     
 
 ## Zsh + Prezto
