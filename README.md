@@ -50,13 +50,20 @@ zsh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 # Create links
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 
 # Power-fonts
 sudo apt install fonts-powerline
 
+# Change theme
+vim ~/.zpreztorc
+# zstyle ':prezto:module:prompt' theme 'sorin' -> zstyle ':prezto:module:prompt' theme 'powerline'
+
 # Set Zsh as your default shell
 chsh -s /bin/zsh
-
 ```
 
 - Apply solarized color
